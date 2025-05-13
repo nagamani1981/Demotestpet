@@ -28,7 +28,8 @@ public class Addtocart extends AbstractComponents  {
 	WebElement parrot ;
 	@FindBy(xpath="//a[contains(text(),'AV-CB-01')]")
 	WebElement parrotmenu;
-	
+	@FindBy(xpath="//a[contains(text(),'Return to Main Menu')]")
+	WebElement retmainmenu;
 	
 	//driver.findElement(By.xpath("//a[contains(text(),'Add to Cart')]")).click();
 	public void cat_add_to_cart()
@@ -36,12 +37,17 @@ public class Addtocart extends AbstractComponents  {
 		cats.click();
 		catmenu.click();
 		addtocartbutton.click();
+		
+		
+		
 	}
 	public fish parrot_add_to_cart()
 	{
 		parrot.click();
 		parrotmenu.click();
 		addtocartbutton.click();
+		retmainmenu.click();
+		//shoppingcart shop=new shoppingcart(driver);
 		fish fi=new fish(driver);
 		return fi;
 	}

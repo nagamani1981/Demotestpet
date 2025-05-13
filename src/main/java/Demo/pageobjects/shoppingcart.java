@@ -20,14 +20,15 @@ public class shoppingcart extends AbstractComponents {
 	}
 	@FindBy(xpath="//table/tbody/tr")
 	
-	List<WebElement> val;
-	//By vals= By.xpath("//table/tbody/tr");
+	//By val= By.xpath("//table/tbody/tr");
+	List<WebElement>val;
+	//
 	public void sumup()
 	{
 		System.out.println(val.size());
 		float sum=0;
 		for (int i=1;i<=val.size();i++) {
-			System.out.println(val.get(i).getText());
+			//System.out.println(val.get(i).getText());
 			if(i<val.size()-1) {
 				int j=i+1;
 				String sample6=driver.findElement(By.xpath("//table[1]/tbody[1]/tr["+j+"]/td[7]")).getText();
@@ -36,7 +37,7 @@ public class shoppingcart extends AbstractComponents {
 				float sample5=Float.parseFloat(sample3);
 				System.out.println(sample5);
 				sum=sum+sample5;
-				//System.out.println(sum);
+				System.out.println(sum);
 			}
 			else if(i==val.size()) {
 				/*String sample2=driver.findElement(By.xpath("//tbody/tr["+i+"]/td[1]")).getText();
@@ -48,10 +49,12 @@ public class shoppingcart extends AbstractComponents {
 				String num2=sample2.substring(1);
 				float sumTotal=Float.parseFloat(num2);
 				System.out.println(sumTotal);
-		     if(sumTotal==sum) {
+				if(sumTotal==sum) {
 		    	 System.out.println("Success");
+		    	 
 		     }
 	}
 }
+		
 }
 }

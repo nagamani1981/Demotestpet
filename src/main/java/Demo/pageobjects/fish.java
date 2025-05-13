@@ -32,14 +32,16 @@ public class fish extends AbstractComponents {
 	
 		
 	}*/
-	public shoppingcart fish_menu_click() throws InterruptedException
+	public shoppingcart fish_menu_click() 
 	{
 		fish.click();
 		fishmenu.click();
 		Addtcart.click();
 		shoppingcart shop=new shoppingcart(driver);
-
 		return shop;
+		
+
+		
 	}
 
 

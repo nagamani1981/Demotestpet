@@ -18,29 +18,15 @@ public class TestPetTest extends BaseTest{
 	@Test
 	public void sampletestpet() throws IOException, InterruptedException
 	{
-		
-		
-		//com.waitsample();
-		
-		//com.waitsample();
-		//Thread.sleep(5000);
-		
 		Addtocart cat= landing.enterstore_click();
 		cat.cat_add_to_cart();
 		cat.mainmenu();
-		cat.parrot_add_to_cart();
-		cat.mainmenu();
+		//cat.parrot_add_to_cart();		
 		fish fi=cat.parrot_add_to_cart();
-		//fi.mainmenu();
-		//fi.fish_click();
-		
-		fi.fish_menu_click();
-		
+		//fi.fish_menu_click();
 		shoppingcart shop=fi.fish_menu_click();
-		shop.sumup();
-				
+		shop.sumup();	
 		
-				
 	}
 
 }

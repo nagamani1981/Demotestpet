@@ -9,6 +9,7 @@
       <class name="Demo.tests.TestPetTest">
       	    <methods>
               <include name ="sampletestpet"/>
+              
           </methods>
       </class>
       
